@@ -1,0 +1,684 @@
+/*
+ *
+ * CSS written based on SMACSS architecture.
+ * To learn more, visit: http://smacss.com/
+ * 
+ * For simplicity, no reset or normalize is added. 
+ * To learn more, visit: https://css-tricks.com/reboot-resets-reasoning/
+ *
+*/
+
+
+/* ---- Base Rules ---- */
+body {
+    background: rgb(136,203,171);
+    background: linear-gradient(0deg, rgba(136,203,171,1) 0%, rgba(0,13,60,1) 100%);
+    margin: 0;
+    font-family: 'Merriweather', serif;
+    color: #fff;
+    scroll-padding-top: 50px; 
+}
+
+html{
+  /*  scroll-behavior: smooth;*/
+}
+/* Typeography General*/
+h1 {
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 3em;
+    margin: 2em 1rem;
+}
+
+*{
+     font-family: Arial, Helvetica, sans-serif;
+     letter-spacing: 2px;
+}
+
+.current{
+    padding-right: 15px;
+}
+
+.logo-image{
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-top: -6px;
+}
+
+/* First section info */
+.parent{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.parent .imginfo{
+    width: 300px;
+    height: 300px;
+}
+.child1{
+    width: 120%;
+    
+
+}
+.child2{
+}
+
+.links{
+    display: flex;
+}
+
+.links h4{
+    padding-right:5%;
+}
+
+/* Second section */
+.Benefitt{
+    text-align: center;
+}
+
+/*Third section have search bar */
+.map1{
+    width: 100%;
+    margin-top: 5%; 
+}
+
+
+.search{
+
+    left: 35%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    background:#2f3640;
+    height: 40px;
+    border-radius: 40px;
+    padding: 10px;
+}
+
+.search:hover > .search-txt{
+    width: 240px;
+    padding-right: 0 6px;
+
+}
+.search-btn{
+    color: #e84118;
+    float: right;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #2f3640;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.search-txt{
+    border: none;
+    background: none;
+    outline: none;
+    float: left;
+    padding: 0;
+    color: white;
+    font-size: 16px;
+    transition: 0.4s;
+    line-height: 40px;
+    width: 0px;
+}
+/*.big-box{
+ height: 100%;
+ width:  100%;
+ position: absolute;
+}*/
+.form-box{
+    width: 380px;
+    height: 400px;
+    margin: 6% auto;
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 15px;
+}
+
+.Buttons{
+    width: 220px;
+    margin: 35px auto;
+    position: relative;
+
+    box-shadow: 0 0 20px 9px #ff61241f;
+    border-radius: 30px;
+}
+
+.toggle-btn{
+    padding: 10px 30px;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    outline: none;
+    position: relative;
+}
+#btn{
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 110px;
+    height: 100%;
+   /* background: linear-gradient(to right, #ff105f, #ffad06);*/
+   background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
+    border-radius: 30px;
+    transition: .5s;
+}
+
+.social{
+    margin: 30px auto;
+    text-align: center;
+}
+.info{
+    top:180px;
+    position: absolute;
+    width: 280px;
+    transition: .5s;
+    padding-top: 180px;
+    padding-left: 50px;
+}
+
+.input-field{
+    width: 100%;
+    padding: 10px 0;
+    margin: 5px 0;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px solid #999;
+    outline: none;
+    background:transparent;
+}
+
+.submit-btn{
+width: 85%;
+padding: 10px 30px;
+cursor: pointer;
+display: block;
+margin: auto;
+background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
+border:0;
+outline: none;
+border-radius: 30px;
+}
+
+.check-box{
+   /* margin: 30px 0 30px 10px;*/
+}
+
+.forForm span{
+    color: black;
+    font-size: 12px;
+    bottom: 68px;
+    position: absolute;
+    background-color: grey;
+}
+
+
+@media only screen and (min-width: 35em){
+    h1 {
+        font-size: 7em;
+        margin: 2em 4rem 1em;
+    }
+}
+
+
+h2 {
+    border-bottom: 1px solid #cc1;
+    font-family: 'Oxygen', Sans-Serif;
+    font-size: 3em;
+    color: #fff;
+}
+
+p {
+    line-height: 1.6em;
+    color: #eee;
+}
+
+/* ---- Layout Rules ---- */
+.page__header .navbar__menu{
+    display: flex;
+    background-color: black;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+
+main {
+    margin: 10vh 1em 10vh;
+}
+
+.main-hero {
+    min-height: 40vh;
+    padding-top: 3em;
+}
+
+section {
+    position: relative;
+    min-height: 80vh;
+}
+
+
+/* ---- Module Rules ---- */
+
+/* Navigation Styles*/
+.navbar__menu div h4 {font: white;
+letter-spacing: 5px;
+font-size: 16px;
+text-transform: uppercase;}
+
+.navbar__menu ul {
+    padding-left: 0;
+    margin: 0;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+}
+.navbar__menu ul li a{
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+    letter-spacing: 2px;
+
+}
+.navbar__menu li {
+    display: inline-block;
+}
+
+.navbar__menu .menu__link {
+    display: block;
+    padding: 1em;
+    font-weight: bold;
+    text-decoration: none;
+    color: #000;
+}
+
+.navbar__menu .menu__link:hover {
+    background: #333;
+    color: #fff;
+    transition: ease 0.3s all;
+}
+
+.three{
+display: none;
+cursor: pointer;
+}
+
+.three div {
+    width: 20px;
+    height: 3px;
+    margin: 5px;
+    background-color: white;
+}
+
+@media screen and (max-width: 768px){
+    body{
+        overflow-x: hidden;
+    }
+    .navbar__menu ul{
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top:8vh;
+        background-color: black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width:30%;
+       /* transform: translateX(100%);
+        transition: transform 4s ease-in; */
+    }
+
+    section{
+        width:70%;
+    }
+.navbar__menu ul li{
+   /*opacity: 0;*/
+
+}
+/*first section*/
+.parent{
+    display: block;
+}
+.parent .imginfo{
+    width: 100%;
+    height: 100%;
+}
+/*Serch icon*/
+.search{
+
+    left: 45%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    background:#2f3640;
+    height: 40px;
+    border-radius: 40px;
+    padding: 10px;
+}
+
+
+
+.search-btn{  
+   
+   color: #e84118;
+    float: right;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #2f3640;
+    display: flex;
+    justify-content: center;
+    align-items: center;*/
+
+}
+.search-txt{
+    border: none;
+    background: none;
+    outline: none;
+    float: left;
+    padding: 0;
+    color: white;
+    font-size: 16px;
+    transition: 0.4s;
+    line-height: 40px;
+    width: 240px;
+}
+.map1{
+    padding-top: 5%;
+}
+.three{
+    display: block;
+}
+}
+.nav-act{
+    transform: translateX(0%);
+}
+
+.navbar__menu ul .current{
+    color: white;
+}
+.navbar__menu ul .active{
+    color: red;
+}
+
+@keyframes navLinkfade{
+    from{
+        opacity: 0;
+        transform:  translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform:  translateX(0px);
+    }
+} 
+/* Header Styles */
+.page__header {
+    background: #fff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 5;
+}
+
+/* Footer Styles */
+.page__footer {
+    background: #000;
+    padding: 3em;
+    color: #fff;
+}
+
+.page__footer p{
+    color: #fff;
+}
+
+
+/* ---- Theme Rules ---- */
+/* Landing Container Styles */
+.landing__container {
+    padding: 1em;
+    text-align: left;
+}
+
+@media only screen and (min-width: 35em){
+    .landing__container {
+        max-width: 50em;
+        padding: 4em;
+    }
+}
+
+section:nth-of-type(even) .landing__container {
+    margin-right: 0;
+    margin-left: auto;
+    text-align: right; 
+}
+
+/* Background Circles */
+/* Note that background circles are created with psuedo elements before and after */
+/* Circles appear to be random do to use of :nth-of-type psuedo class */
+section:nth-of-type(odd) .landing__container::before {
+    content: '';
+    background: rgba(255, 255, 255, 0.187);
+    position: absolute;
+    z-index: -5;
+    width: 20vh;
+    height: 20vh;
+    border-radius: 50%;
+    opacity: 0;
+    transition: ease 0.5s all;
+}
+
+section:nth-of-type(even) .landing__container::before {
+    content: '';
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,.1) 0%, rgba(255,255,255,.2) 100%);
+    position: absolute;
+    top: 3em;
+    right: 3em;
+    z-index: -5;
+    width: 10vh;
+    height: 10vh;
+    border-radius: 50%;
+    opacity: 0;
+    transition: ease 0.5s all;
+}
+
+section:nth-of-type(3n) .landing__container::after {
+    content: '';
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,.1) 0%, rgba(255,255,255,.2) 100%);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -5;
+    width: 10vh;
+    height: 10vh;
+    border-radius: 50%;
+    opacity: 0;
+    transition: ease 0.5s all;
+}
+
+section:nth-of-type(3n + 1) .landing__container::after {
+    content: '';
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,.1) 0%, rgba(255,255,255,.2) 100%);
+    position: absolute;
+    right: 20vw;
+    bottom: -5em;
+    z-index: -5;
+    width: 15vh;
+    height: 15vh;
+    border-radius: 50%;
+    opacity: 0;
+    transition: ease 0.5s all;
+}
+
+
+/* ---- Theme State Rules ---- */
+/* Section Active Styles */
+/* Note: your-active-class class is applied through javascript. You should update the class here and in the index.html to what you set in your javascript file.  */
+section.your-active-class {
+    background: rgb(0, 0, 0);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+section.your-active-class .landing__container::before {
+    opacity: 1;
+    animation: rotate 4s linear 0s infinite forwards;
+}
+
+section.your-active-class .landing__container::after {
+    opacity: 1;
+    animation: rotate 5s linear 0s infinite forwards reverse;
+}
+
+/* Section Active Styles Keyframe Animations */
+@keyframes rotate {
+	from {
+		transform: rotate(0deg)
+		           translate(-1em)
+		           rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg)
+		           translate(-1em) 
+		           rotate(-360deg);
+	}
+}
+
+
+/**ACTIVE**/
+.page__header.scroll a.active {
+    color: 10D0D0;
+    border-bottom: 2px solid 10D0D0;
+}
+.page__header a.active {
+    color: darkturquoise;
+    border-bottom: 2px solid darkturquoise;
+}
+
+/*dash page */
+.container{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr; 
+}
+.grid{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr; 
+   /* border: 3px solid;*/
+}
+.infoo .pie{
+  /*margin-left: 40%;*/
+
+}
+.infoo {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 1fr;
+   /* border: 3px solid; */
+    
+}
+.infoo .butt{
+    display: block;
+}
+.gases{
+    margin-top:0; 
+    border: 3px solid;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+      height: 100vh;
+   /* grid-template-rows: 1fr; */
+}
+.gases .col-lg-4 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+.gases h2 {
+  font-weight: 400;
+}
+.gases .col-lg-4 p {
+  margin-right: .75rem;
+  margin-left: .75rem;
+}
+
+/*Cards style*/
+#team img{
+    margin-top: -50px;
+}
+#team p{
+    font-weight: 500;
+}
+#team .card{
+    border-radius: 0;
+    box-shadow: 5px 5px 15px 1090D0;
+    transition: all 0.3s ease-in;
+    ~webkit-transition: all 0.3s ease-in;
+    ~moz-transition: all 0.3s ease-in;
+}
+/*Section 4 COVID */
+
+* {
+  font-family: sans-serif; /* Change your font family */
+}
+
+.content-table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  min-width: 400px;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.content-table thead tr {
+  background-color: #009879;
+  color: #ffffff;
+  text-align: left;
+  font-weight: bold;
+}
+
+.content-table th,
+.content-table td {
+  padding: 12px 15px;
+}
+
+.content-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.content-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.content-table tbody tr:last-of-type {
+  border-bottom: 2px solid #009879;
+}
+
+.content-table tbody tr.active-row {
+  font-weight: bold;
+  color: #009879;
+}
+
+.circle{
+    background-color: red;
+    width:50%;
+    border-radius:50%;
+    border:2px solid #000;
+    box-shadow:0 0 10px #000;
+    margin-left: 10%; 
+  }
+.circle:after{
+    content:"";
+    padding-bottom:100%;
+    display:block;
+  }
+
+.circle .txt{
+    text-align: center;
+    top:500px;
+    margin-top: 50%;
+
+}
