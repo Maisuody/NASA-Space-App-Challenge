@@ -18,10 +18,6 @@ body {
     color: #fff;
     scroll-padding-top: 50px; 
 }
-
-html{
-  /*  scroll-behavior: smooth;*/
-}
 /* Typeography General*/
 h1 {
     font-family: 'Fira Sans', sans-serif;
@@ -59,8 +55,6 @@ h1 {
     width: 120%;
     
 
-}
-.child2{
 }
 
 .links{
@@ -202,9 +196,6 @@ outline: none;
 border-radius: 30px;
 }
 
-.check-box{
-   /* margin: 30px 0 30px 10px;*/
-}
 
 .forForm span{
     color: black;
@@ -288,11 +279,15 @@ text-transform: uppercase;}
 }
 
 .navbar__menu .menu__link {
-    display: block;
     padding: 1em;
     font-weight: bold;
     text-decoration: none;
     color: #000;
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .navbar__menu .menu__link:hover {
@@ -334,10 +329,6 @@ cursor: pointer;
     section{
         width:70%;
     }
-.navbar__menu ul li{
-   /*opacity: 0;*/
-
-}
 /*first section*/
 .parent{
     display: block;
@@ -370,7 +361,7 @@ cursor: pointer;
     background: #2f3640;
     display: flex;
     justify-content: center;
-    align-items: center;*/
+    align-items: center;
 
 }
 .search-txt{
@@ -569,10 +560,6 @@ section.your-active-class .landing__container::after {
     grid-template-columns: 1fr 1fr; 
    /* border: 3px solid;*/
 }
-.infoo .pie{
-  /*margin-left: 40%;*/
-
-}
 .infoo {
     display: grid;
     grid-template-columns: 1fr 1fr; 
@@ -614,8 +601,8 @@ section.your-active-class .landing__container::after {
     border-radius: 0;
     box-shadow: 5px 5px 15px 1090D0;
     transition: all 0.3s ease-in;
-    ~webkit-transition: all 0.3s ease-in;
-    ~moz-transition: all 0.3s ease-in;
+    -webkit-transition: all 0.3s ease-in;
+    -moz-transition: all 0.3s ease-in;
 }
 /*Section 4 COVID */
 
